@@ -134,6 +134,7 @@ $('document').ready(function () {
       try {
           await navigator.clipboard.writeText(textToCopy);
           console.log('copied to clipboard')
+          alert('Copied to clipboard!')
       } catch (error) {
           console.log('failed to copy to clipboard. error=' + error);
       }
@@ -145,7 +146,7 @@ $('document').ready(function () {
   var itv = window.setInterval(function() {
 
     const urlParams = new URLSearchParams(window.location.search);
-    const example = urlParams.get('example') || 'gettingstarted';
+    const example = urlParams.get('example') || 'input-stream';
 
     $('.trywith select').val(example);
     if (window.ace) {
