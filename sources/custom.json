@@ -1,0 +1,26 @@
+{
+  "schema": {
+    "kind": {
+      "type": "string",
+      "title": "Kind",
+      "readonly": true
+    },
+    "id": {
+      "type": "string",
+      "title": "ID",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "string",
+      "title": "Short Description"
+    },
+    "claz": {
+      "type": "string",
+      "title": "Class",
+      "required": true
+    }
+  },
+  "value": {
+      "kind": "custom"
+    }
+}

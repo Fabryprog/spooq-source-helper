@@ -1,0 +1,36 @@
+{
+  "schema": {
+    "kind": {
+      "type": "string",
+      "title": "Kind",
+      "readonly": true
+    },
+    "format": {
+      "type": "string",
+      "title": "Format",
+      "readonly": true
+    },
+    "id": {
+      "type": "string",
+      "title": "ID",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "string",
+      "title": "Short Description"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "rowsPerSecond": {
+          "type": "string",
+          "title": "Rows per second"
+        }
+      }
+    }
+  },
+  "value": {
+      "kind": "input-stream",
+      "format": "rate"
+    }
+}

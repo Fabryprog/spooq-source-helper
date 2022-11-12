@@ -1,0 +1,36 @@
+{
+  "schema": {
+    "kind": {
+      "type": "string",
+      "title": "Kind",
+      "readonly": true
+    },
+    "format": {
+      "type": "string",
+      "title": "Format",
+      "readonly": true
+    },
+    "id": {
+      "type": "string",
+      "title": "ID",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "string",
+      "title": "Short Description"
+    },
+    "path": {
+      "type": "string",
+      "title": "Path",
+      "required": true
+    },
+    "cache": {
+      "type": "boolean",
+      "title": "Cache"
+    }
+  },
+  "value": {
+      "kind": "input",
+      "format": "parquet"
+    }
+}

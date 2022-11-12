@@ -1,0 +1,59 @@
+{
+  "schema": {
+    "kind": {
+      "type": "string",
+      "title": "Kind",
+      "readonly": true
+    },
+    "format": {
+      "type": "string",
+      "title": "Format",
+      "readonly": true
+    },
+    "id": {
+      "type": "string",
+      "title": "ID",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "string",
+      "title": "Short Description"
+    },
+    "path": {
+      "type": "string",
+      "title": "Path",
+      "required": true
+    },
+    "dependsOn": {
+      "type": "string",
+      "title": "Depends on"
+    },
+    "source": {
+      "type": "string",
+      "title": "Source"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "header": {
+          "type": "boolean",
+          "title": "Header"
+        }
+      }
+    },
+    "mode": {
+      "type": "string",
+      "title": "Mode",
+      "enum": [
+        "append",
+        "overwrite",
+        "ignore",
+        "error"
+      ]
+    }
+  },
+  "value": {
+      "kind": "output",
+      "format": "parquet"
+    }
+}

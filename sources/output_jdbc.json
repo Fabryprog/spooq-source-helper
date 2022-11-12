@@ -1,0 +1,57 @@
+{
+  "schema": {
+    "kind": {
+      "type": "string",
+      "title": "Kind",
+      "readonly": true
+    },
+    "format": {
+      "type": "string",
+      "title": "Format",
+      "readonly": true
+    },
+    "id": {
+      "type": "string",
+      "title": "ID",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "string",
+      "title": "Short Description"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "title": "URL",
+          "required": true
+        },
+        "driver": {
+          "type": "string",
+          "title": "Driver",
+          "required": true
+        },
+        "dbtable": {
+          "type": "string",
+          "title": "DB Table",
+          "required": true
+        },
+        "user": {
+          "type": "string",
+          "title": "User",
+          "required": true
+        },
+        "password": {
+          "type": "password",
+          "title": "Password",
+          "required": true
+        }
+      }
+    }
+  },
+  "value": {
+      "kind": "output",
+      "format": "jdbc"
+    }
+}

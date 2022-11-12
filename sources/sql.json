@@ -1,0 +1,35 @@
+{
+  "schema": {
+    "kind": {
+      "type": "string",
+      "title": "Kind",
+      "readonly": true
+    },
+    "id": {
+      "type": "string",
+      "title": "ID",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "string",
+      "title": "Short Description"
+    },
+    "sql": {
+      "type": "string",
+      "title": "SQL",
+      "required": true
+    },
+    "cache": {
+      "type": "boolean",
+      "title": "Cache"
+    },
+    "show": {
+      "type": "boolean",
+      "title": "Show"
+    }
+  },
+  "value": {
+      "kind": "sql",
+      "format": "jdbc"
+    }
+}

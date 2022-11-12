@@ -1,0 +1,49 @@
+{
+  "schema": {
+    "kind": {
+      "type": "string",
+      "title": "Kind",
+      "readonly": true
+    },
+    "format": {
+      "type": "string",
+      "title": "Format",
+      "readonly": true
+    },
+    "id": {
+      "type": "string",
+      "title": "ID",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "string",
+      "title": "Short Description"
+    },
+    "path": {
+      "type": "string",
+      "title": "Path",
+      "required": true
+    },
+    "schema": {
+      "type": "string",
+      "title": "Schema"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "header": {
+          "type": "boolean",
+          "title": "Header"
+        }
+      }
+    },
+    "cache": {
+      "type": "boolean",
+      "title": "Cache"
+    }
+  },
+  "value": {
+      "kind": "input",
+      "format": "csv"
+    }
+}

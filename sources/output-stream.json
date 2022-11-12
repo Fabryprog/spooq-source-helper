@@ -1,0 +1,44 @@
+{
+  "schema": {
+    "kind": {
+      "type": "string",
+      "title": "Kind",
+      "readonly": true
+    },
+    "format": {
+      "type": "string",
+      "title": "Format",
+      "readonly": true
+    },
+    "id": {
+      "type": "string",
+      "title": "ID",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "string",
+      "title": "Short Description"
+    },
+    "outputMode": {
+      "type": "string",
+      "title": "Mode"
+    },
+    "options": {
+      "type": "object",
+      "properties": {
+        "policy": {
+          "type": "string",
+          "title": "Policy"
+        },
+        "value": {
+          "type": "string",
+          "title": "Value"
+        }
+      }
+    }
+  },
+  "value": {
+      "kind": "output-stream",
+      "format": "console"
+    }
+}
