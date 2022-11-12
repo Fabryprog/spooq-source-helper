@@ -1,4 +1,6 @@
-SPOOQ SOURCE Helper 
+![SPOOQ Logo](https://supermariolabs.github.io/spooq/docs/assets/images/banner.png "Title")
+
+SPOOQ Source Helper 
 =========
 
 Powered from "json form playground" demo project.
