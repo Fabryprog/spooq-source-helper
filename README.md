@@ -25,3 +25,7 @@ Then open this in page in your favorite browser:
 [`http://localhost:8080/playground/`](http://localhost:8080/playground/)
 
 NB: The final `/` in the URL is needed.
+
+## Preview
+
+![Preview](preview.png)
