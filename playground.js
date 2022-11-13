@@ -1,5 +1,9 @@
 /*global $, ace, console*/
 $('document').ready(function () {
+
+  //temporary variable to store clipboard value
+  var lastFormValue = "";
+
   var formObject = {
     schema: {
       example: {
@@ -21,7 +25,7 @@ $('document').ready(function () {
         'default': 'sql'
       },
       greatform: {
-        title: 'JSON Form object to render',
+        title: 'JSON Form Object',
         type: 'string'
       }
     },
@@ -36,7 +40,6 @@ $('document').ready(function () {
         },
         onChange: function (evt) {
           var selected = $(evt.target).val();
-
           loadExample(selected);
           if (history) history.pushState(
             { example: selected},
@@ -49,7 +52,6 @@ $('document').ready(function () {
         type: 'ace',
         aceMode: 'json',
         width: '100%',
-        height: '' + (window.innerHeight - 140) + 'px',
         notitle: true,
         onChange: function () {
           generateForm();
@@ -58,6 +60,29 @@ $('document').ready(function () {
     ]
   };
 
+  var formObject2 = {
+    schema: {
+      finalJSON: {
+        title: 'Spooq Source',
+        type: 'textarea',
+        readonly: true
+      },
+    },
+    form: [
+      {
+        key: 'finalJSON',
+        notitle: false
+      },
+      {
+        "type": "button",
+        "title": "Copy to Clipboard",
+        "onClick": function (evt) {
+          evt.preventDefault();
+          copyTextToClipboard();        
+        }
+      }
+    ]
+  }
 
   /**
    * Loads and displays the example identified by the given name
@@ -86,6 +111,7 @@ $('document').ready(function () {
 
     // Reset result pane
     $('#result').html('');
+    $('#jsonform-2-elt-finalJSON').html('');
 
     // Parse entered content as JavaScript
     // (mostly JSON but functions are possible)
@@ -108,7 +134,8 @@ $('document').ready(function () {
         if (console && console.log) {
           console.log('Values extracted from submitted form', values);
         }
-        copyTextToClipboard(JSON.stringify(values, null, 2));
+        lastFormValue = JSON.stringify(values, null, 2)
+        $('#jsonform-2-elt-finalJSON').html(lastFormValue);
 
       };
       createdForm.onSubmit = function (errors, values) {
@@ -130,17 +157,18 @@ $('document').ready(function () {
   };
  
  
-  async function copyTextToClipboard(textToCopy) {
+  async function copyTextToClipboard() {
       try {
-          await navigator.clipboard.writeText(textToCopy);
+          await navigator.clipboard.writeText(lastFormValue);
           console.log('copied to clipboard')
-          alert('Copied to clipboard!')
+          //alert('Copied to clipboard!')
       } catch (error) {
           console.log('failed to copy to clipboard. error=' + error);
       }
   }
   // Render the form
   $('#form').jsonForm(formObject);
+  $('#form2').jsonForm(formObject2);
 
   // Wait until ACE is loaded
   var itv = window.setInterval(function() {
