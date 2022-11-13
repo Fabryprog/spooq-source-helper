@@ -1,4 +1,4 @@
-![SPOOQ Logo](https://supermariolabs.github.io/spooq/docs/assets/images/banner.png "Title")
+![Preview](preview.png)
 
 SPOOQ Source Helper 
 =========
@@ -25,7 +25,3 @@ Then open this in page in your favorite browser:
 [`http://localhost:8080/playground/`](http://localhost:8080/playground/)
 
 NB: The final `/` in the URL is needed.
-
-## Preview
-
-![Preview](preview.png)
